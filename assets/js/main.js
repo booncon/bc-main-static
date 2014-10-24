@@ -104,7 +104,7 @@ function parallaxScroll(scroll_pos) {
 }
 function initSmoothScroll() {
   $('.anchor_link, a[target="_blank"], .contact_link').click(function () {
-    ga.push(['_trackPageview', $(this).attr('href')]);
+    ga('send', 'pageview', $(this).attr('href'));
   });  
   $('.anchor_link').click(function () {    
     $.smoothScroll({
